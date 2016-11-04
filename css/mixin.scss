@@ -1,0 +1,10 @@
+@mixin midsrc{
+  @media screen and (max-width: 895px){
+    @content;
+  }
+}
+@mixin smlsrc{
+  @media screen and (max-width: 529px){
+    @content;
+  }
+}

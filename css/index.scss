@@ -1,0 +1,688 @@
+@import "mixin";
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
+}
+body{
+  background-image: url(../img/bj2.jpg);
+  @include smlsrc{
+    background-image: url(../img/bj4.gif);
+  }
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+audio{
+  display: none;
+}
+.top{
+  width:100%;
+  padding:25px 0;
+  height:30px;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 20;
+  box-shadow: 0 2px 2px rgba(86, 86, 86, 0.92);
+  background:rgb(0,0,0);
+  .top_lists{
+    width:80%;
+    height:80px;
+    @include  midsrc{
+      display: block;
+    }
+    @include  smlsrc{
+      display: none;
+    }
+    text-align: justify;
+    margin: -25px auto 0;
+    li{
+      width:percentage(1/10);
+      display: inline-block;
+      text-align: center;
+      transition: all ease 1s;
+      a{
+        color:#fff;
+        line-height: 80px;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all ease 1s;
+      }
+      &.beixuan{
+        background-image: url(../img/bj4.gif);
+        background-repeat: no-repeat;
+      }
+      &:hover{
+        cursor: pointer;
+        box-shadow:0 -2px 2px #fff;
+        background-image: url(../img/bj4.gif);
+        background-position: center center;
+        a{
+          text-shadow: 0 0 3px #fff;
+        }
+      }
+    }
+    &::after{
+      content: "";
+      display:inline-block;
+      height:0;
+      width: 100%;
+    }
+  }
+  .top_lists2{
+    width:80%;
+    height:80px;
+    display: none;
+    @include  midsrc{
+      display:none;
+    }
+    @include  smlsrc{
+      display: block;
+    }
+    text-align: justify;
+    margin: -25px auto 0;
+    li{
+      width:percentage(1/4);
+      display: inline-block;
+      text-align: center;
+      transition: all ease 1s;
+      a{
+        color:#fff;
+        line-height: 80px;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all ease 1s;
+      }
+      &.beixuan{
+        background-image: url(../img/bj4.gif);
+        background-repeat: no-repeat;
+      }
+      &:hover{
+        cursor: pointer;
+        box-shadow:0 -2px 2px #fff;
+        background-image: url(../img/bj4.gif);
+        background-position: center center;
+        a{
+          text-shadow: 0 0 3px #fff;
+        }
+      }
+    }
+    &::after{
+      content: "";
+      display:inline-block;
+      height:0;
+      width: 100%;
+    }
+  }
+  span{
+    color:#fff;
+    margin: 0 50px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
+.liebiao{
+  width:80%;
+  position: relative;
+  background-size: cover;
+  box-shadow: 0 0 30px rgba(186, 186, 186, 0.18);
+  background-position: center center;
+  margin:80px auto 10px;
+  background-repeat: no-repeat;
+  padding-bottom: 130px;
+  background-attachment: fixed;
+  .mask{
+    width:100%;
+    height:600px;
+    margin: 0 auto;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .lists{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    min-height: 487px;
+    margin:0 auto;
+    padding-bottom: 100px;
+    padding-top: 20px;
+    background: rgba(68, 68, 73, 0.55);
+    background-size: cover;
+    background-position:80px center;
+  li{
+    line-height: 30px;
+    margin: 0 20px;
+    color:#fff;
+    box-shadow: 0 1px 1px rgba(255, 255, 255, 0.52);
+    transition: all ease 1s;
+    span{
+      margin: 0 10px;
+      &.gename:hover{
+        cursor: pointer;
+      }
+    }
+    &:hover{
+      color:rgba(35, 131, 193, 0.8);
+      background: rgba(255, 255, 255, 0.56);
+      box-shadow: 0 0 200px rgba(214, 214, 214, 0.5);
+    }
+    &.yanchang{
+      font-weight: bold;
+      color:rgba(35, 131, 193, 0.8);
+      background: rgba(255, 255, 255, 0.56);
+      box-shadow: 0 0 20px rgba(214, 214, 214, 0.79);
+    }
+    .lists_icon{
+      float: right;
+      height:30px;
+      div{
+        float: left;
+        width:30px;
+        height:30px;
+        margin: 0 10px;
+        background-position: center center;
+        background-size: contain;
+        &.h{
+          background-image: url(../img/her.png);
+          &:hover{
+            cursor: pointer;
+            background-image: url(../img/her1.png);
+          }
+          &.her{
+            background-image: url(../img/her1.png);
+          }
+
+        }
+        &.d{
+          cursor: pointer;
+          background-image: url(../img/del.png);
+          &:hover{
+            background-image: url(../img/del1.png);
+          }
+          &.del{
+            background-image: url(../img/del1.png);
+          }
+        }
+      }
+    }
+  }
+}
+}
+.music{
+  width:100%;
+  padding:25px 0;
+  height:50px;
+  position: fixed;
+  bottom:0;
+  left:0;
+  box-shadow: 0 -2px 2px rgba(86, 86, 86, 0.92);
+  background:rgb(0,0,0);
+  @include midsrc{
+    //padding:20px 0;
+    height:100px;
+  }
+  .mianban{
+    width:80%;
+    margin:0 auto;
+    text-align: justify;
+    .star-logo{
+      width:7%;
+      box-shadow:0 0 2px #cccccc;
+      background-repeat:no-repeat;
+      background-size: cover;
+      background-origin: border-box;
+      float: left;
+      position: relative;
+      .slo_mask{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.5);
+        background-image: url(../img/up.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        &.down{
+           background-image: url(../img/down.png);
+        }
+      }
+      @include midsrc{
+        display: none;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .youce{
+      width:93%;
+      float: left;
+      @include midsrc{
+        width: 100%;
+      }
+      .song_name{
+          width:100%;
+          height:20px;
+        position: relative;
+          text-align: center;
+          font-size: 13px;
+          color:#cccccc;
+          line-height: 20px;
+        .song_fun{
+          position: absolute;
+          border: 1px solid #ffffff;
+          right:80px;
+          z-index: 50;
+          top:0;
+          width:100px;
+          a{
+            text-decoration: none;
+            display: block;
+            position: relative;
+            color:#fff;
+          }
+          .s_f{
+            position: absolute;
+            border: 1px solid #ffffff;
+            bottom: 20px;
+            display:none;
+            left:0;
+            li{
+              width:100px;
+              background: rgba(216, 216, 216, 0.59);
+              line-height:30px;
+              text-align: center;
+              &:hover{
+                cursor: pointer;
+                background: rgba(158, 132, 172, 0.58);
+              }
+              &.fangshi{
+                background: rgba(158, 132, 172, 0.58);
+              }
+            }
+          }
+        }
+        }
+
+      .song_state{
+        //padding-left: 30px;
+        height:30px;
+        .caozuo{
+          width:15%;
+          float: left;
+          height:20px;
+          padding: 5px 0;
+          @include midsrc{
+            display: none;
+          }
+          div{
+            height:20px;
+            width:20px;
+            float: left;
+            margin: 0 5px;
+            background-size: contain;
+          }
+          .sq{
+            background-image:url("../img/forward.png");
+          }
+          .btn{
+            background-image:url("../img/play.png");
+            &.end{
+              background-image:url("../img/pause.png");
+            }
+          }
+          .xq{
+
+            background-image:url("../img/back.png");
+
+          }
+        }
+        .shijian{
+          width:65%;
+          float:left;
+          height:30px;
+          min-width: 337px;
+          @include midsrc{
+            width:80%;
+            margin: 0 auto;
+            height:30px;
+            float: none;
+          }
+          .time{
+            float:left;
+            line-height: 30px;
+            font-size: 13px;
+            color:#fff;
+            width:10%;
+            span{
+              margin: 0 2px;
+            }
+          }
+          .time-pro{
+            width:74%;
+            float:left;
+            height:4px;
+            border-radius: 3px;
+            background: #ccc;
+            margin:13px 10px;
+            .time-qj{
+              float: left;
+              border-radius: 3px;
+              max-width: 96%;
+              display: block;
+              width:0px;
+              height:100%;
+              background: #71ce56;
+            }
+            .time-yuan{
+              float: left;
+              width:10px;
+              height:10px;
+              border-radius: 50%;
+              background:#fff;
+              margin-top: -3px;
+            }
+          }
+        }
+        .yinliang{
+          width:20%;
+          height:20px;
+          padding: 5px 0;
+          float:left;
+          @include midsrc{
+          display: none;
+        }
+          .yinliang-logo{
+            width:20px;
+            height:20px;
+            background-image:url(../img/lound.png);
+            background-size: contain;
+            float: left;
+            &.jingyin{
+              background-image: url(../img/quite.png);
+            }
+          }
+          .yinliang-pro{
+            float:left;
+            width:50%;
+            height:4px;
+            background: #ccc;
+            margin: 8px 10px;
+            .yinliang-qj{
+              display: block;
+              width:0;
+              max-width: 85%;
+              height:100%;
+              background:#135979;
+              float: left;
+            }
+            .yinliang-yuan{
+              float: left;
+              width:10px;
+              height:10px;
+              border-radius: 50%;
+              margin-top: -3px;
+              background:#fff;
+            }
+          }
+        }
+        &::after{
+          width:100%;
+          height:0;
+          content: "";
+          float: left;
+          display: inline-block;
+        }
+      }
+
+    }
+    .sm-src{
+      display: none;
+      width: 210px;
+      margin: 0 auto;
+      height:30px;
+      padding: 5px 0;
+      background: rgba(255,255,255,0.5);
+      @include midsrc{
+        display: block;
+      }
+      div{
+        width:30px;
+        float: left;
+        height:30px;
+        background-size: contain;
+        margin: 0 20px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .sm-up{
+        background-image: url(../img/sm_up.png);
+      }
+      .sm-play{
+        background-image: url(../img/sm_play.png);
+        &.sm-pause{
+          background-image: url(../img/sm_pause.png);
+        }
+      }
+      .sm-down{
+        background-image: url(../img/sm_down.png);
+      }
+    }
+    }
+  .song_mask{
+    width:90%;
+    height:487px;
+    position: absolute;
+    top: -488px;
+    display: none;
+    padding:0 5%;
+    left:0;
+    background: rgb(0, 0, 0);
+    background-image: url(../img/bj2.jpg);
+    div{
+      float: left;
+    }
+    .song_xs{
+      width:20%;
+      height:100%;
+      position: relative;
+      box-shadow: 0px 0 200px rgba(70, 70, 70, 0.89) inset;
+      .song_show{
+        line-height: 50px;
+        color: white;
+        font-size: 12px;
+        &:hover{
+          cursor:pointer;
+        }
+      }
+      .song_list{
+      position: absolute;
+      left:0;
+      top:51px;
+      width:100%;
+      height:100% ;
+        li{
+          padding: 0 5%;
+          min-width: 90%;
+          overflow: hidden;
+          color: white;
+          font-size: 12px;
+          box-shadow: 0 0 2px #fff;
+          line-height: 30px;
+          transition: all ease 1s;
+          &.sing{
+            background: #cccccc;
+          }
+          &:hover{
+            background: #cccccc;
+            cursor: pointer;
+          }
+          span:nth-child(1){
+            margin-right: 5px;
+          }
+        }
+      overflow-y:auto;
+      padding-top: 5px;
+    }
+    }
+    .song_xinxi{
+      width:60%;
+      height:100%;
+      position: relative;
+      background: rgba(125, 125, 125, 0.58);
+      background-size: cover;
+      background-position: center center;
+      .song_lrc{
+        position: absolute;
+        width:80%;
+        height:55%;
+        top:40%;
+        left:0;
+        right:0;
+        margin:0 auto;
+        //background:#000;
+        overflow: hidden;
+        ul{
+          li{
+            text-align: center;
+            line-height: 25px;
+            font-size: 12px;
+            color: rgba(128, 128, 128, 0.75);
+          }
+          li:nth-child(1){
+            line-height: 40px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #f0f0f0;
+            text-shadow: 0 0 5px #000 ;
+            background: rgba(0,0,0,0.2);
+          }
+          margin-top: 0px;
+        }
+      }
+    }
+    .song_logo{
+      position: relative;
+      .tx{
+        position: absolute;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        margin:auto;
+        margin-top:50px;
+        width:130px;
+        height:130px;
+        border-radius: 50%;
+        background-position: center center;
+        border: 3px solid rgba(94, 94, 94, 0.57);
+        box-shadow: 0 0 5px rgb(240, 240, 240);
+        background-size: cover;
+        .Q{
+          position: absolute;
+          width:20px;
+          height:20px;
+          border-radius: 50%;
+          left:0;
+          top:0;
+          right:0;
+          bottom:0;
+          margin:auto;
+          background: transparent;
+          border: 5px solid rgba(159, 159, 159, 0.53);
+          box-shadow:0 0 100px rgba(221, 221, 221, 0.62) inset;
+        }
+      }
+      .tiaodong{
+        width:100%;
+        height:150px;
+        position: absolute;
+        bottom:100px;
+        left:0;
+        a{
+          width:100%;
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          line-height: 30px;
+          color:#fff;
+        }
+      }
+      box-shadow: 0px 0 200px rgba(47, 47, 47, 0.89) inset;
+      width:20%;
+      height:100%;
+    }
+  }
+  .sc_mask{
+    width:80%;
+    height:487px;
+    position: absolute;
+    top:-488px;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    display: none;
+    background: rgba(69, 69, 69, 0.5);
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/bj3.jpg);
+    box-shadow: 0 0 500px rgba(151, 73, 118, 0.65) inset;
+    .sc_btn{
+      line-height: 30px;
+      width:20%;
+      margin-left: 50px;
+      text-indent: 2em;
+      border: 1px solid #fff;
+      color:transparent;
+      text-shadow:0 0 1px #6c8bce;
+      transition: all ease 1s;
+      &:hover{
+        cursor: pointer;
+        box-shadow: 0 0 20px #fff inset;
+        color:#ffffff;
+      }
+    }
+    ul{
+      width:90%;
+      padding:2% 0;
+      margin:0 auto;
+      li{
+        color:#fff;
+        text-indent: 2em;
+        line-height: 30px;
+        box-shadow: 0 2px 2px #fff;
+        span{
+          margin:  0 10px;
+        }
+      }
+    }
+  }
+}
+.allsong{
+  width:3%;
+  height:150px;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  letter-spacing: 2px;
+  font-size: 20px;
+  color: rgba(195, 195, 195, 0.5);
+  font-weight: bold;
+  text-shadow:0 0 10px #71ce56;
+  top:0;
+  left:0;
+  bottom:0;
+  margin: auto 0;
+  &:hover{
+    cursor: pointer;
+    color:#ffffff;
+    text-shadow:0 0 10px #71ce56;
+    box-shadow: 0 0 10px #fff inset;
+  }
+}
